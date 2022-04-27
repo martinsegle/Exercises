@@ -112,7 +112,15 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        // 1. Ja ātrums ir 60 vai mazāks, tad atgriežam vērtību 0
+
+        // 2. Ja ātrums ir 61 un vairāk un zem 80 ieskaitot, tad atgriežam vērtību 1
+
+        // 3. Ja ātrums ir 81 un vairāk, tad atgriežam vērtību 2
+
+        // 4. Ja ir tava dzimšanas diena...
+        
+        return 0;
     }
 
     /// <summary>
