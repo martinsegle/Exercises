@@ -20,7 +20,7 @@ public class Logic1
     public bool CigarParty(int cigars, bool isWeekend)
     {
         // 1. Ja cigāru skaits ir zem 40, tad atgriežam false
-        // 2. Ja ir brīvidiena, tad atgriežam vērtību true
+        // 2. Ja ir brīvdiena, tad atgriežam vērtību true
         // 3. Ja cigāru skaits ir zem 60, tad atgriežam vērtību true (zinām, ka nav brīvdiena
         if (cigars >= 40 && (isWeekend || cigars <= 60))
         {
@@ -114,13 +114,19 @@ public class Logic1
     {
         // 1. Ja ātrums ir 60 vai mazāks, tad atgriežam vērtību 0
 
-        // 2. Ja ātrums ir 61 un vairāk un zem 80 ieskaitot, tad atgriežam vērtību 1
-
-        // 3. Ja ātrums ir 81 un vairāk, tad atgriežam vērtību 2
-
-        // 4. Ja ir tava dzimšanas diena...
         
-        return 0;
+        if (speed <= 60 || (isBirthday && speed <= 65))
+        {
+            return 0;
+        }
+
+        if (speed > 60 && speed <= 80 || (isBirthday && speed > 65 && speed <= 85))
+        {
+            return 1;
+        }    
+                           
+            return 2; 
+     
     }
 
     /// <summary>
@@ -133,7 +139,12 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        throw new NotImplementedException();
+        if ((a + b) >= 10 && (a + b) <= 19)
+        {
+            return 20;
+        }
+        
+        return a + b;
     }
 
     /// <summary>
