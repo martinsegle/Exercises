@@ -180,19 +180,7 @@ public class Logic1
 
         return sevenClock;
 
-        //if (day > 0 && day < 6 && !vacation)
-        //{
-        //    return sevenClock;
-        //}      
-        //else if ((day == 0 || day == 6 && !vacation) || (day > 0 && day < 6 && vacation))
-        //{
-        //    return tenClock;
-        //}
-        //else 
-        //{
-        //    return offClock;
-        //}
-        
+             
         
     }
 
@@ -207,7 +195,24 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a == 6 || b == 6)
+        {
+            return true;
+        }
+
+        if ((a + b) == 6)
+        {
+            return true;
+        }
+
+        int diff = a - b;
+
+        if (Math.Abs(diff) == 6)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
