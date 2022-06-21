@@ -160,7 +160,40 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        string sevenClock = "7:00";
+        string tenClock = "10:00";
+        string offClock = "off";
+        
+        if (day ==0 || day == 6)
+        {
+            if (vacation)
+            {
+                return offClock;
+            }
+            return tenClock;
+        }
+
+        if (vacation)
+        {
+            return tenClock;
+        }
+
+        return sevenClock;
+
+        //if (day > 0 && day < 6 && !vacation)
+        //{
+        //    return sevenClock;
+        //}      
+        //else if ((day == 0 || day == 6 && !vacation) || (day > 0 && day < 6 && vacation))
+        //{
+        //    return tenClock;
+        //}
+        //else 
+        //{
+        //    return offClock;
+        //}
+        
+        
     }
 
     /// <summary>
