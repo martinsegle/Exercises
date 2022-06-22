@@ -336,7 +336,14 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        throw new NotImplementedException();
+        int within = num % 10;
+
+        if (within <= 2 || within == 8 || within == 9)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
