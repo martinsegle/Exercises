@@ -292,7 +292,15 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        throw new NotImplementedException();
+        int mult3 = n % 3;
+        int mult5 = n % 5;
+
+        if ((mult3 == 0 && mult5 != 0) || (mult3 != 0 && mult5 == 0))
+        {
+            return true;
+        }
+        
+        return false;
     }
 
     /// <summary>
