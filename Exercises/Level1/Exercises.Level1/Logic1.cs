@@ -252,8 +252,7 @@ public class Logic1
     public bool SpecialEleven(int n)
     {
         int result = n % 11;
-        
-        
+                
         if (result == 0 || result == 1)
         {
             return true;
@@ -356,7 +355,16 @@ public class Logic1
     /// </summary>
     public int TeenSum(int a, int b)
     {
-        throw new NotImplementedException();
+              
+        int teen = a + b;
+        int nineteen = 19;
+
+        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19))
+        {
+            return nineteen;
+        }
+        
+        return teen;
     }
 
     /// <summary>
