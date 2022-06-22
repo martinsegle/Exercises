@@ -226,22 +226,19 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        if (n >= 0 && n <= 10 && !outsideMode)
+        if (n >= 1 && n <= 10 && !outsideMode)
         {
             return true;
         }
 
-        //if (n == 1 || n == 10 && outsideMode)
-        //{
-        //    return true;
-        //}
-
-        if (n <= 0 || n >= 10 && outsideMode)
+       
+        if ((n <= 1 || n >= 10) && outsideMode)
         {
             return true;
-        }
-        
-        return false;
+        }      
+       
+            return false;
+       
     }
 
     /// <summary>
