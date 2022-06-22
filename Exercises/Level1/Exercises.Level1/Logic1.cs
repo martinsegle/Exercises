@@ -251,7 +251,15 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        throw new NotImplementedException();
+        int result = n % 11;
+        
+        
+        if (result == 0 || result == 1)
+        {
+            return true;
+        }
+        
+        return false;
     }
 
     /// <summary>
