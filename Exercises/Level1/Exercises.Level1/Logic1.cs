@@ -272,7 +272,14 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        throw new NotImplementedException();
+        int leftAfter = n % 20;
+
+        if (leftAfter == 1 || leftAfter == 2)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
