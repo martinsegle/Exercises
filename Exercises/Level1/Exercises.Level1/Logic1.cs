@@ -314,7 +314,15 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-        throw new NotImplementedException();
+        int less = n % 20;
+
+        if (less == 19 || less == 18)
+        {
+            return true;
+        }
+
+        return false;
+        
     }
 
     /// <summary>
